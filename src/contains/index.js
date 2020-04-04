@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col} from "reactstrap";
+import {Row, Col, Button} from "reactstrap";
 
 import Img1 from "../assets/img/main/img1.png";
 import Img2 from "../assets/img/main/img2.png";
@@ -38,19 +38,44 @@ function Index() {
                 </Col>
             </Row>
             <Row className="main-content">
-                <Col xs="12" md="12" sm="12">Content</Col>
+                <h1>Ứng dụng <span className='corona'>Corona</span> hoạt động như thế nào?</h1>
+                <h3>Chúng tôi sử dụng tín hiệu Bluetooth để xác định nếu bạn đang ở gần<br/>
+                người sử dụng ứng dụng <span className='corona'>Corona</span> khác.</h3>
+                <h3>Dữ liệu được mã hóa và chỉ được lưu trữ trên điện thoại của bạn.</h3>
+                <h3>Bộ Y tế thông qua sự đồng ý của bạn để tải lên dữ liệu, nếu điều đó <br/>cần thiết để theo dõi liên lạc.</h3>
             </Row>
             <Row className="main-info">
-                <Col xs="4">Information 1</Col>
-                <Col xs="4">Information 2</Col>
-                <Col xs="4">Information 3</Col>
+                <h1>Tại sao cần tải ứng dụng <span className='corona'>Corona</span>?</h1>
+                <ul>
+                    <li>
+                        <img src={Img2} alt=""/>
+                        <h3>Bảo vệ bản thân</h3>
+                        <p>Nếu bạn có tiếp xúc gần với một trường hợp nhiễm COVID-19, chúng tôi giúp Bộ Y tế liên hệ với bạn nhanh chóng để hướng dẫn và chăm sóc.</p>
+                    </li>
+                    <li>
+                        <img src={Img3} alt=""/>
+                        <h3>Bảo vệ người thân</h3>
+                        <p>Được liên lạc sớm hơn cho phép chúng tôi bảo vệ tốt hơn những người xung quanh ta, giảm thiểu sự lây lan của COVID-19.</p>
+                    </li>
+                    <li>
+                        <img src={Img4} alt=""/>
+                        <h3>Bảo vệ cộng đồng</h3>
+                        <p>Ứng dụng Corona giúp hoàn thành theo dõi liên lạc ở cấp quốc gia một cách nhanh chóng. Khi càng nhiều người sử dụng nó, chúng ta sẽ an toàn hơn.</p>
+                    </li>
+                </ul>
             </Row>
             <Row className="main-download">
-                <Col xs="6" sm="4">Label</Col>
-                <Col xs="6" sm="4">Image</Col>
+                <div>
+                    <h1>Hãy tải ứng dụng <span className='corona'>Corona</span> từ bây giờ!<br/>Và cài đặt cho cả những người xung quanh.</h1>
+                    <div>
+                        <img src={LogoTao}/>
+                        <img src={LogoGG}/>
+                    </div>
+                </div>
             </Row>
             <Row className="main-contact">
-                <Col sm={{ size: 6, order: 2, offset: 1 }}>Contact</Col>
+                <h1>Bạn có thắc mắc?</h1>
+                <button>Liên hệ với chúng tôi</button>
             </Row>
             <Row className="footer-page">
                 <Col className="inFooter1">
