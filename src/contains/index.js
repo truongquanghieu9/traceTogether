@@ -53,7 +53,21 @@ function Index() {
                 <Col sm={{ size: 6, order: 2, offset: 1 }}>Contact</Col>
             </Row>
             <Row className="footer-page">
-                <Col sm="12" md={{ size: 6, offset: 3 }}>Footer</Col>
+                <Col className="inFooter1">
+                    <div>Được thực hiện bởi</div>
+                    <img src={LogoFis} />
+                </Col>
+                <Col className="inFooter2">
+                    <div>Cập nhật lần cuối: 04/03/2020</div>
+                    <div>©2020 Bộ Y tế Việt Nam</div>
+                </Col>
+                <Col className="inFooter3">
+                    <div>Là sự hợp tác giữa</div>
+                    <div>
+                        <img src={logoQuocHuy} />
+                        <img src={logoBoYTe} />
+                    </div>
+                </Col>
             </Row>
         </div>
     );
