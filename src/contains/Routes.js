@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 // styles for this kit
 import "../assets/css/bootstrap.min.css";
@@ -12,25 +12,32 @@ import "../assets/css/main/index.css";
 
 // pages for this kit
 import Index from "./index";
+import Home from "./views/home"
 import TestIndex from "../components/views/index";
 
 function Routes() {
     return (
         <Switch>
             <Route
-                path="/index"
+                path="/"
                 render={ () => {
-                    return <Index/>
+                    return <Home/>
                 }}
             />
             <Route
                 path="/test"
                 render={ () => {
+                    return <Index/>
+                }}
+            />
+            <Route
+                path="/testPage"
+                render={ () => {
                     return <TestIndex/>
                 }}
             />
-            <Redirect to="/index"/>
-            <Redirect from="/" to="/index"/>
+            {/*<Redirect to="/index"/>*/}
+            {/*<Redirect from="/" to="/index"/>*/}
         </Switch>
     );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col, Button} from "reactstrap";
+import {Row, Col} from "reactstrap";
 
 import Img1 from "../assets/img/main/img1.png";
 import Img2 from "../assets/img/main/img2.png";
@@ -8,8 +8,8 @@ import Img4 from "../assets/img/main/img4.png";
 import LogoTao from "../assets/img/main/logo-AppStore.png";
 import LogoGG from "../assets/img/main/logo-GooglePlay.png";
 import LogoFis from "../assets/img/main/logo-Fis.png";
-import logoBoYTe from "../assets/img/main/logo-BoYTe.png";
-import logoQuocHuy from "../assets/img/main/quocHuy.png";
+import logoBoYTe from "../assets/img/main/logo-BoYTe2.png";
+import logoQuocHuy from "../assets/img/main/quocHuy2.png";
 
 function Index() {
     return (
@@ -24,9 +24,9 @@ function Index() {
                 <Col>
                     <div className="main-label-content">
                         <h1>Cùng tải ứng dụng <span>Corona</span>,<br/>cùng nhau an toàn.</h1>
-                        <h3>
-                            Tham gia với cộng đồng ngăn chặn sự lây lan của COVID-19 thông qua theo dõi liên lạc dựa vào cộng đồng.
-                        </h3>
+                        <div className="left-content">
+                            Tham gia với cộng đồng ngăn chặn <br/> sự lây lan của COVID-19 thông qua <br/> theo dõi lịch sử tiếp xúc cộng đồng.
+                        </div>
                         <div>
                             <img src={LogoTao}/>
                             <img src={LogoGG}/>
@@ -42,7 +42,7 @@ function Index() {
                 <h3>Chúng tôi sử dụng tín hiệu Bluetooth để xác định nếu bạn đang ở gần<br/>
                 người sử dụng ứng dụng <span className='corona'>Corona</span> khác.</h3>
                 <h3>Dữ liệu được mã hóa và chỉ được lưu trữ trên điện thoại của bạn.</h3>
-                <h3>Bộ Y tế thông qua sự đồng ý của bạn để tải lên dữ liệu, nếu điều đó <br/>cần thiết để theo dõi liên lạc.</h3>
+                <h3>Khi bạn đồng ý và chủ động tải dữ liệu lên hệ thống thì Bộ Y tế <br/> mới có thể sử dụng dữ liệu của bạn.</h3>
             </Row>
             <Row className="main-info">
                 <h1>Tại sao cần tải ứng dụng <span className='corona'>Corona</span>?</h1>
@@ -55,12 +55,12 @@ function Index() {
                     <li>
                         <img src={Img3} alt=""/>
                         <h3>Bảo vệ người thân</h3>
-                        <p>Được liên lạc sớm hơn cho phép chúng tôi bảo vệ tốt hơn những người xung quanh ta, giảm thiểu sự lây lan của COVID-19.</p>
+                        <p>Được liên lạc sớm hơn cho phép chúng tôi bảo vệ tốt hơn những người xung quanh bạn, giảm thiểu sự lây lan của COVID-19.</p>
                     </li>
                     <li>
                         <img src={Img4} alt=""/>
                         <h3>Bảo vệ cộng đồng</h3>
-                        <p>Ứng dụng Corona giúp hoàn thành theo dõi liên lạc ở cấp quốc gia một cách nhanh chóng. Khi càng nhiều người sử dụng nó, chúng ta sẽ an toàn hơn.</p>
+                        <p>Ứng dụng Corona giúp theo dõi lịch sử tiếp xúc ở cấp quốc gia một cách nhanh chóng. Khi càng nhiều người sử dụng nó, chúng ta sẽ an toàn hơn.</p>
                     </li>
                 </ul>
             </Row>
