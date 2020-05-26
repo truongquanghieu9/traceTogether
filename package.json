@@ -2,14 +2,17 @@
   "name": "clone-tracetogether",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://truongquanghieu9.github.io/traceTogether/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "nouislider": "^14.2.0",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.6",
     "react-bootstrap-switch": "^15.5.3",
     "react-datetime": "^2.16.3",
     "react-dom": "^16.13.1",
@@ -21,7 +24,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "yarn run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start": "react-scripts start",
+    "start": "concurrently \"yarn run watch-css\" \"set NODE_PATH=./src && react-scripts start\"",
     "start-dev": "concurrently \"yarn run watch-css\" \"set NODE_PATH=./src && react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,7 +32,9 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.css",
     "minify-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.css --source-map true"
+    "map-sass": "node-sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.css --source-map true",
+    "predeploy": "yarn && yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
