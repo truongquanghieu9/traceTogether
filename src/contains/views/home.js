@@ -100,8 +100,9 @@ function Home() {
                     </div>
                 </Col>
                 <Col className="inFooter2">
-                    <div>Cập nhật lần cuối: 04/03/2020</div>
+                    <div>Last updated at: 04/03/2020</div>
                     <div>©2020 Bộ Y tế Việt Nam</div>
+                    <div>Development by: Quang Hieu</div>
                 </Col>
             </Row>
         </Container>
