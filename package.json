@@ -24,9 +24,9 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "yarn run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start": "concurrently \"yarn run watch-css\" \"set NODE_PATH=./src && react-scripts start\"",
+    "start": "concurrently \"yarn run watch-css\" \"set NODE_PATH=./src && yarn react-scripts start\"",
     "start-dev": "concurrently \"yarn run watch-css\" \"set NODE_PATH=./src && react-scripts start\"",
-    "build": "react-scripts build",
+    "build": "yarn react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
